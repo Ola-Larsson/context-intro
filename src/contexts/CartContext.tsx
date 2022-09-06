@@ -23,7 +23,7 @@ function CartProvider({ children }: Props) {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-  }, []);
+  }, [cart]);
 
   const addToCart = (product: Product) => {
     setCart((prevState) => [...prevState, product]);
